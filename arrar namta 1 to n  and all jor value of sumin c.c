@@ -26,10 +26,9 @@ int main ()
     {
         for (j=1; j<=n; j++)
         {
-            if ((i*j)%2==0)
-            {
-
-                sum = sum + arr[i][j];
+            if(arr[i][j]%2==0){        
+                // printf("%d\n", arr[i][j]);
+        sum += arr[i][j];
             }
         }
 
