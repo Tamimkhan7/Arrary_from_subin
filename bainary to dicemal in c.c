@@ -1,16 +1,13 @@
-#include <stdio.h>
-#include <math.h>
-int main()
-{
-    int number;
-    int sum = 0;
-    printf("Enter the number: ");
-    scanf("%d", &number);
-    for (int i = 0; number != 0; i++)
-    {
-        sum = sum+ (number % 10) * pow(2, i);
-        number = number/ 10;
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;cin >>n;
+    int i=0,sum=0; 
+    while(n != 0){
+        int rem = n%10;
+        n/=10;
+        sum += rem*pow(2,i);
+        i++;
     }
-    printf("The Decimal Value of Binary Number is %d", sum);
-    return 0;
+    cout<<sum<<endl;
 }
